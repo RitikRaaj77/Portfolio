@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -63,4 +63,137 @@ h3.h3 {
 
 h4.h4 {
     font-size: 16px;
-}
+} */
+
+/* Custom Properties for Theming */
+:root {
+    --background-primary1: #141414;
+    --background-secondary2: #141414;
+    --background-primary: #f8f9fa;
+    --background-secondary: #e9ecef;
+    --foreground-primary: #333;
+    --foreground-secondary: #666;
+    --accent-color: #1270d9;
+    --text-muted: #6c757d;
+    --spacing-base: 1rem;
+    --spacing-small: 0.5rem;
+    --font-base: Arial, sans-serif;
+    --font-sm: 0.875rem;
+    --font-lg: 1.25rem;
+    --font-exlg: 4.25rem;
+  }
+  
+  body {
+    font-family: var(--font-base);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-primary1);
+    color: var(--foreground-primary);
+    line-height: 1.6;
+  }
+  
+  /* Layout Improvements */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-base);
+    padding: var(--spacing-base);
+  }
+  
+  .column {
+    flex: 1;
+    padding: var(--spacing-small);
+  }
+  
+  .column-1, .column-2 {
+    margin-right: var(--spacing-small);
+  }
+  
+  .blog-banner-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .blog-text {
+    margin-bottom: var(--spacing-base);
+    color: var(--text-muted);
+  }
+  
+  .wrapper-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wrapper {
+    margin-left: var(--spacing-small);
+  }
+  
+  .text-sm {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+  }
+  
+  .separator {
+    margin: 0 0.3rem;
+  }
+  
+  h1.h1, h3.h3, h4.h4 {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-small);
+  }
+  
+  h1.h1 {
+    font-size: var(--font-exlg);
+  }
+  
+  h3.h3 {
+    font-size: 1.125rem;
+  }
+  
+  h4.h4 {
+    font-size: var(--font-sm);
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--foreground-secondary);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .column {
+      margin-bottom: var(--spacing-base);
+    }
+  }
+  
+  @media (max-width: 550px) {
+    h2.h1 {
+      font-size: 1.5rem;
+    }
+  
+    h3.h3 {
+      font-size: 1rem;
+    }
+  
+    h4.h4 {
+      font-size: 0.875rem;
+    }
+  }
+  
