@@ -443,7 +443,7 @@ header .btn-group {
 }
 
 .blog-card .h3:hover {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
 }
 
@@ -458,7 +458,7 @@ header .btn-group {
   gap: 15px;
 }
 
-.blog .h4 { color: var(--foreground-secondary); }
+.blog .h4 { font-size: medium; color: var(--foreground-secondary); }
 
 .blog .h4:hover { color: var(--accent); }
 
